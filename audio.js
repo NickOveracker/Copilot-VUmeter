@@ -80,6 +80,13 @@ document.body.style.fontSize = "16px";
 document.body.style.fontWeight = "bold";
 document.body.style.textAlign = "center";
 
+// Style links for dark theme << I wrote this line myself (Nick)
+var links = document.getElementsByTagName("a");
+for (var i = 0; i < links.length; i++) {
+    links[i].style.color = "#FFF";
+    links[i].style.textDecoration = "none";
+}
+
 // Add button to the bottom of the screen to toggle playing the audio file << I wrote this line myself (Nick)
 var button = document.createElement("button");
 button.innerHTML = "Play Audio";

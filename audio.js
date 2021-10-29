@@ -79,3 +79,29 @@ document.body.style.fontFamily = "Arial";
 document.body.style.fontSize = "16px";
 document.body.style.fontWeight = "bold";
 document.body.style.textAlign = "center";
+
+// Add button to the bottom of the screen to toggle playing the audio file << I wrote this line myself (Nick)
+var button = document.createElement("button");
+button.innerHTML = "Play Audio";
+button.style.position = "fixed";
+button.style.bottom = "0";
+button.style.left = "0";
+button.style.width = "100%";
+button.style.height = "50px";
+button.style.backgroundColor = "#FFF";
+button.style.color = "#000";
+button.style.fontFamily = "Arial";
+button.style.fontSize = "16px";
+button.style.fontWeight = "bold";
+button.style.textAlign = "center";
+button.style.cursor = "pointer";
+button.onclick = function() {
+    if (audioFile.paused) {
+        audioFile.play();
+        button.innerHTML = "Pause Audio";
+    } else {
+        audioFile.pause();
+        button.innerHTML = "Play Audio";
+    }
+}
+document.body.appendChild(button);
